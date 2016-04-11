@@ -41,7 +41,7 @@ def reproject(request):
                 continue
             p = f["geometry"]["coordinates"]
             p = __reproject(p)
-        if f["geometry"]["type"] == "Polygon":
+        elif f["geometry"]["type"] == "Polygon":
             print f["geometry"]
             if f["geometry"]["coordinates"][0][0][0] < 1000:
                 continue
