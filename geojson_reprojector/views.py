@@ -15,7 +15,7 @@ def __reproject(_p):
 
 @view_config(route_name='home',renderer="templates/mytemplate.pt")
 def home(request):
-    describe_url = "http://opendata.vdl.lu/odaweb/index.jsp?describe=1"
+    describe_url = "https://opendata.vdl.lu/odaweb/index.jsp?describe=1"
     catalog = requests.get(describe_url).json()
     _catalog = []
     for item in catalog["data"]:
